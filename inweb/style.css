@@ -21,7 +21,8 @@ div{
 	display: flex;
 	width: 20%;
 	height: 10vh;
-	padding: 10px;
+	padding: 1%;
+	z-index: 5;
 }
 
 .log h1{
@@ -38,6 +39,12 @@ div{
 
 .nav p{
 	padding: 10px 20px;
+	transition: 0.3s;
+}
+
+.nav p:hover{
+	color: white;
+	font-size: 3vh;
 }
 
 .nav{
@@ -46,9 +53,11 @@ div{
 	height: 10vh;
 	padding: 10px;
 	text-align: right;
+	z-index: 5;
 }
 
 .dropdown{
+	z-index: 5;
 	display: block;
 	float: right;
 	overflow: hidden;
@@ -63,8 +72,9 @@ div{
 }
 
 .dropdown img{
-	height: 30px;
+	height: 5vh;
 	transition: 0.3s;
+	z-index: 5;
 }
 
 .dropdown-content {
@@ -72,18 +82,19 @@ div{
   margin-left: 40%;
   display: none;
   background-color: transparent;
-  min-width: 50px;
-  z-index: 1;
+  min-width: 40px;
+  z-index: 6;
   transition: 0.3s;
 }
 
 .dropdown-content a {
   float: none;
-  padding: 12px 12px;
+  padding: 10% 2%;
   text-decoration: none;
   display: block;
   text-align: right;
   transition: 0.3s;
+  font-size: 2.5vh;
 }
 
 .dropdown-content a:hover{
@@ -102,7 +113,7 @@ div{
 
 @media screen and (max-width: 800px){
 	.log h1{
-		font-size: 20px;
+		font-size: 4vh;
 	}
 
 	.nav p{
@@ -115,8 +126,8 @@ div{
 		margin-right: 0px;
 	}
 
-	.dropdown button:hover{
-	transition: rotate(90deg);
+	.dropdown img:hover{
+	transform: rotate(90deg);
 }
 }
 
@@ -137,9 +148,57 @@ div{
 	transition: 0.3s;
 }
 
+
+.shop{
+	margin-top: 1%;
+}
+
+.shop a{
+	width: 150%;
+	text-decoration: none;
+	align-items: center;
+	overflow: hidden;
+	border: solid;	
+	display: flex;
+	border-color: #1b1f26;
+  transition: all 0.3s ease;
+}
+
+.shop a:hover{
+	width: 180%;
+}
+
+.shop p{
+	text-align: center;
+	padding: 5%;
+  transition: all 0.3s ease;
+}
+
+.shop a:hover{
+	background-color: #1b1f26;
+}
+
+.shop a:hover > .hvrtxt{
+	color: white;
+}
+
+
 @media screen and (max-width: 800px){
 	.main{
 		padding-top: 20%;
+		font-size: 7.5vw;
+	}
+
+	.shop{
+		font-size: 10vw;
+	}
+
+	.shop p{
+		font-size: 10vw;
+	}
+
+	.shop a{
+		width: 200%;
 	}
 }
 
@@ -187,31 +246,100 @@ div{
 }
 
 .abtext{
+	border: solid;
+	border-color: white;
+	border-width: 10px;
 	width: 50%;
 	height: 100%;
-	display: flex;
+	display: inline-block;
 	background-color: #b4c9e8;
 	justify-content: center;
   align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
 
+.abtext h1{
+	color: #b4c9e8;
 }
 
 .abtext p{
 	text-align: center;
-	font-size: 40px;
+	font-size: 5vh;
 	color: white;
 	padding: 50px 50px;
 	transition: 0.3s;
 }
 
+.review {
+	background-color: white;
+	padding: 10px;
+	overflow: hidden;
+  margin: 3%;
+}
+
+.review figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	z-index: 1;
+	animation: 30s slider infinite;
+}
+.review figure img {
+	width: 20%;
+	float: left;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	10% {
+		left: 0;
+	}
+	20% {
+		left: -100%;
+	}
+	30% {
+		left: -100%;
+	}
+	40% {
+		left: -200%;
+	}
+	50% {
+		left: -200%;
+	}
+	60% {
+		left: -300%;
+	}
+	70% {
+		left: -300%;
+	}
+	80% {
+		left: -400%;
+	}
+	90% {
+		left: -400%;
+	}
+	100% {
+		left: 0;
+	}
+}
+
 @media screen and (max-width: 800px){
 	.about{
 		width: 100%;
-		height: 100vh;
+		height: 140vh;
 	}
-	.abtimg, .abtext{
+	.abtimg{
 		width: 100%;
-		height: 50vh;
+		height: 60vh;
+	}
+
+	.abtext{
+		width: 100%;
+		height: 80vh;
 	}
 
 	.abtimg img{
@@ -225,15 +353,213 @@ div{
 	}
 }
 
-.contact{
+
+
+.post{
 	width: 100%;
 	height: 100vh;
-	background-color: #e3ebef;
-	margin: 0;
-	padding: 0;
-	display: flex;
+	transition: 0.5s;
+}
+
+.mapimg{
+	border: solid;
+	border-color: white;
+	border-width: 10px;
+	border-top: 0px;
+	background-color: #b4c9e8;
+	width: 50%;
+	height: 100vh;
+	padding: 3%;
+	display: inline-block;
+	text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mapimg p{
+	padding: 5% 0%;
+	color: white;
+}
+
+.mapimg iframe{
+	width: 60vh;
+	height: 60vh;
+	border: solid;
+	border-width: 1vh;
+	border-color: white;
+	transition: 0.3s;
+}
+
+.mapimg iframe:hover{
+	width: 65vh;
+	height: 65vh;
+}
+
+
+
+.daily{
+	background-image: url('img/paper.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50%;
+	height: 100vh;
+	display: inline-block;
+	background-color: #b4c9e8;
 	text-align: center;
 	justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+#slider {
+	overflow: hidden;
+  background-color: white;
+  border-style: solid;
+  border-color: #ffdf57;
+  background-color: #849bff;
+  margin: 5%;
+}
+
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+#slider figure img {
+	width: 20%;
+	float: left;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	10% {
+		left: 0;
+	}
+	20% {
+		left: -100%;
+	}
+	30% {
+		left: -100%;
+	}
+	40% {
+		left: -200%;
+	}
+	50% {
+		left: -200%;
+	}
+	60% {
+		left: -300%;
+	}
+	70% {
+		left: -300%;
+	}
+	80% {
+		left: -400%;
+	}
+	90% {
+		left: -400%;
+	}
+	100% {
+		left: 0;
+	}
+}
+
+
+.post p{
+	text-align: center;
+	font-size: 5vh;
+	transition: 0.3s;
+}
+
+/*.foot{
+	position: initial;
+	background-color: white;
+	height: 2%;
+	width: 100%;
+}
+
+.foot p{
+	font-size: 2vh;
+}
+*/
+@media screen and (max-width: 800px){
+
+	.daily{
+		width: 100%;
+		height: 100vh;
+	}
+
+	.mapimg{
+		width: 100%;
+		height: 100vh;
+	}
+
+/*	.foot{
+		width: 100%;
+		height: 10vh;
+	}*/
+}
+
+
+
+
+
+.next{
+  position: absolute;
+  bottom: 3%;
+  filter: opacity(20%) invert(20%);
+  transition: all 0.3s ease;
+  transform: rotate(90deg);
+}
+
+.next:hover{
+  filter: invert(20%);
+  transition: all 0.3s ease;
+  bottom: 1%;
+  transform: rotate(90deg);
+}
+
+.next img{
+  padding: 20px;
+  height: 75px;
+  transition: all 0.3s ease;
+}
+
+.next2{
+	position: absolute;
+  filter: opacity(20%) invert(20%);
+  transition: all 0.3s ease;
+  transform: rotate(90deg);
+  bottom: -100%;
+  left: 72%;
+}
+
+
+
+.next2:hover{
+  filter: invert(20%);
+  transition: all 0.3s ease;
+  transform: rotate(90deg);
+  bottom: -102%;
+
+}
+
+.next2 img{
+  padding: 20px;
+  height: 75px;
+  transition: all 0.3s ease;
+
+}
+
+@media screen and (max-width: 800px){
+	.next2{
+		display: none;
+	}
 }
 
