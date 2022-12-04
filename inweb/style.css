@@ -228,6 +228,7 @@ div{
 	display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .abtimg img{
@@ -344,7 +345,8 @@ div{
 
 	.abtimg img{
 		border: none;
-		height: 100%;
+		width: 100%;
+		height: auto;
 	}
 
 	.abtext p{
@@ -396,6 +398,11 @@ div{
 	height: 65vh;
 }
 
+@media screen and (max-width: 800px){
+	.mapimg iframe{
+		width: 90%;
+	}
+}
 
 
 .daily{
