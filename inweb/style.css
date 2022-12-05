@@ -69,6 +69,8 @@ div{
 	background-color: transparent;
 	border: none;
 	outline: none;
+	margin: 0;
+	padding: 0;
 }
 
 .dropdown img{
@@ -79,22 +81,23 @@ div{
 
 .dropdown-content {
 	margin-top: 0px;
-  margin-left: 40%;
   display: none;
   background-color: transparent;
   min-width: 40px;
   z-index: 6;
   transition: 0.3s;
+  margin-top: 50%;
 }
 
 .dropdown-content a {
   float: none;
-  padding: 10% 2%;
+  padding: 10% 0%;
   text-decoration: none;
   display: block;
   text-align: right;
   transition: 0.3s;
   font-size: 2.5vh;
+  margin-right: -60%;
 }
 
 .dropdown-content a:hover{
@@ -123,11 +126,26 @@ div{
 	}
 
 	.dropdown{
-		margin-right: 0px;
+		margin-right: -5px;
 	}
 
 	.dropdown img:hover{
 	transform: rotate(90deg);
+}
+}
+
+@media screen and (max-width: 200px){
+	.dropdown{
+		margin-right: -5px;
+		margin-top: -15px;
+	}
+
+	.dropdown-content {
+  margin-top: 30%;
+}
+
+	.dropdown-content a {
+  margin-right: -15%;
 }
 }
 
@@ -143,7 +161,7 @@ div{
 	background-position: center;
 	padding-top: 10%;
 	padding-left: 4%;
-	font-size: 6vw;
+	font-size: 500%;
 	text-align: left;
 	transition: 0.3s;
 }
@@ -186,19 +204,25 @@ div{
 @media screen and (max-width: 800px){
 	.main{
 		padding-top: 20%;
-		font-size: 7.5vw;
+		font-size: 5vh;
 	}
 
 	.shop{
-		font-size: 10vw;
+		height: 100vh;
 	}
 
-	.shop p{
-		font-size: 10vw;
-	}
-
-	.shop a{
+	.shop a .hvrtxt{
 		width: 200%;
+		height: 10vh;
+		font-size: 7vw;
+		padding: 0%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.shop a:hover{
+		width: 220%;
 	}
 }
 
@@ -212,13 +236,13 @@ div{
 
 .about{
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	transition: 0.5s;
 }
 
 .abtimg{
 	width: 50%;
-	height: 100%;
+	height: 100vh;
 	background-color: #b4c9e8;
 	background-image: url('img/product.jpg');
 	background-size: cover;
@@ -232,8 +256,7 @@ div{
 }
 
 .abtimg img{
-	width: auto;
-	height: 80%;
+	width: 90%;
 	margin: 5%;
 	border: solid;
 	border-color: white;
@@ -247,91 +270,90 @@ div{
 }
 
 .abtext{
-	border: solid;
-	border-color: white;
-	border-width: 10px;
 	width: 50%;
-	height: 100%;
+	height: 100vh;
 	display: inline-block;
 	background-color: #b4c9e8;
 	justify-content: center;
   align-items: center;
   overflow: hidden;
   text-align: center;
+  padding: 2% 0%;
 }
 
 .abtext h1{
 	color: #b4c9e8;
 }
 
-.abtext p{
-	text-align: center;
-	font-size: 5vh;
+.abtext h2{
 	color: white;
-	padding: 50px 50px;
-	transition: 0.3s;
+	font-size: 4vw;
 }
 
-.review {
+.abtext p{
+	text-align: justify;
+	color: white;
+	padding: 5% 5%;
+	transition: 0.3s;
+	font-size: 2.5vw;
+}
+
+#review {
+	position: relative;
 	background-color: white;
+	border-radius: 30px;
 	padding: 10px;
 	overflow: hidden;
   margin: 3%;
 }
 
-.review figure {
+#review figure {
 	position: relative;
 	width: 500%;
 	margin: 0;
 	left: 0;
 	z-index: 1;
-	animation: 30s slider infinite;
+	animation: 20s review infinite;
 }
-.review figure img {
+#review figure img {
 	width: 20%;
 	float: left;
 }
 
-@keyframes slider {
-	0% {
-		left: 0;
-	}
-	10% {
-		left: 0;
-	}
-	20% {
-		left: -100%;
-	}
-	30% {
-		left: -100%;
-	}
-	40% {
-		left: -200%;
-	}
-	50% {
-		left: -200%;
-	}
-	60% {
-		left: -300%;
-	}
-	70% {
-		left: -300%;
-	}
-	80% {
-		left: -400%;
-	}
-	90% {
-		left: -400%;
-	}
-	100% {
-		left: 0;
-	}
+@keyframes review {
+	 0% {
+      left: 0;
+  }
+  20% {
+      left: 0;
+  }
+  25% {
+      left: -100%;
+  }
+  45% {
+      left: -100%;
+  }
+  50% {
+      left: -200%;
+  }
+  70% {
+      left: -200%;
+  }
+  75% {
+      left: -300%;
+  }
+  95% {
+      left: -300%;
+  }
+  100% {
+      left: -400%;
+  }
 }
 
 @media screen and (max-width: 800px){
 	.about{
 		width: 100%;
-		height: 140vh;
+		height: auto;
 	}
 	.abtimg{
 		width: 100%;
@@ -340,7 +362,11 @@ div{
 
 	.abtext{
 		width: 100%;
-		height: 80vh;
+		height: auto;
+	}
+
+	#review{
+		width: auto;
 	}
 
 	.abtimg img{
@@ -351,72 +377,42 @@ div{
 
 	.abtext p{
 		font-size: 25px;
-		padding: 50px 50px;
+		padding: 5% 5%;
 	}
 }
 
 
 
 .post{
-	width: 100%;
-	height: 100vh;
-	transition: 0.5s;
-}
-
-.mapimg{
-	border: solid;
-	border-color: white;
-	border-width: 10px;
-	border-top: 0px;
-	background-color: #b4c9e8;
-	width: 50%;
-	height: 100vh;
-	padding: 3%;
-	display: inline-block;
-	text-align: center;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.mapimg p{
-	padding: 5% 0%;
-	color: white;
-}
-
-.mapimg iframe{
-	width: 60vh;
-	height: 60vh;
-	border: solid;
-	border-width: 1vh;
-	border-color: white;
-	transition: 0.3s;
-}
-
-.mapimg iframe:hover{
-	width: 65vh;
-	height: 65vh;
-}
-
-@media screen and (max-width: 800px){
-	.mapimg iframe{
-		width: 90%;
-	}
-}
-
-
-.daily{
 	background-image: url('img/paper.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	width: 50%;
-	height: 100vh;
-	display: inline-block;
-	background-color: #b4c9e8;
-	text-align: center;
+	float: left;
+	align-items: center;
 	justify-content: center;
-  align-items: center;
+	text-align: center;
+	margin: auto;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	transition: 0.5s;
+}
+
+.post p{
+	text-align: center;
+	font-size: 5vh;
+	transition: 0.3s;
+}
+
+
+
+.daily{
+	width: 40%;
+	margin: 5% 0%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
   overflow: hidden;
 }
 
@@ -425,8 +421,10 @@ div{
   background-color: white;
   border-style: solid;
   border-color: #ffdf57;
+  border-radius: 30px;
   background-color: #849bff;
   margin: 5%;
+  margin-bottom: 1%;
 }
 
 #slider figure {
@@ -434,7 +432,7 @@ div{
 	width: 500%;
 	margin: 0;
 	left: 0;
-	animation: 20s slider infinite;
+	animation: 15s slider infinite;
 }
 #slider figure img {
 	width: 20%;
@@ -442,77 +440,184 @@ div{
 }
 
 @keyframes slider {
-	0% {
-		left: 0;
-	}
-	10% {
-		left: 0;
-	}
-	20% {
-		left: -100%;
-	}
-	30% {
-		left: -100%;
-	}
-	40% {
-		left: -200%;
-	}
-	50% {
-		left: -200%;
-	}
-	60% {
-		left: -300%;
-	}
-	70% {
-		left: -300%;
-	}
-	80% {
-		left: -400%;
-	}
-	90% {
-		left: -400%;
-	}
-	100% {
-		left: 0;
-	}
+ 	0% {
+      left: 0;
+  }
+  20% {
+      left: 0;
+  }
+  25% {
+      left: -100%;
+  }
+  45% {
+      left: -100%;
+  }
+  50% {
+      left: -200%;
+  }
+  70% {
+      left: -200%;
+  }
+  75% {
+      left: -300%;
+  }
+  95% {
+      left: -300%;
+  }
+  100% {
+      left: -400%;
+  }
 }
 
 
-.post p{
+.shoplink{
+	width: 60%;
+	padding: 2%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
-	font-size: 5vh;
+}
+
+
+.shoplink a{
+	text-decoration: none	;
+}
+
+
+.shoplink img{
+	width: 25vw;
+	padding: 5%;
+	border-radius: 50px;
 	transition: 0.3s;
 }
 
-/*.foot{
-	position: initial;
-	background-color: white;
-	height: 2%;
+.shoplink img:hover{
+	transform: translate(0%, -6%);
+	opacity: 90%;
+	border: solid;
+	border-width: 10px;
+}
+
+
+
+
+@media screen and (max-width: 800px){
+
+	.post{
+		width: 100%;
+		height: auto;
+	}
+	.daily{
+		width: 100%;
+	}
+
+	.shoplink{
+		width: 100%;
+	}
+
+	.shoplink img{
+		width: 45vw;
+	}
+
+
+}
+
+.foot{
 	width: 100%;
 }
 
-.foot p{
-	font-size: 2vh;
+.mapimg{
+	width: 50%;
+	height: 100vh;
+	padding: 3%;
+	display: inline-block;
+	text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+	background-color: #b4c9e8;
 }
-*/
-@media screen and (max-width: 800px){
 
-	.daily{
-		width: 100%;
-		height: 100vh;
-	}
+.mapimg p{
+	padding: 5% 0%;
+	color: white;
+	font-size: 2.5vw;
+}
+
+.mapimg iframe{
+	width: 60vh;
+	height: 60vh;
+	border: solid;
+	border-width: 2vh;
+	border-color: white;
+	border-radius: 10%;
+	transition: 0.3s;
+}
+
+.mapimg iframe:hover{
+	width: 65vh;
+	height: 65vh;
+}
+
+.contact{
+	width: 50%;
+	height: 100vh	;
+	display: block;
+	padding: 4%;
+	align-items: center;
+	text-align: center;
+	overflow:	 hidden;
+
+}
+
+.contact img:not(table *){
+	height: 40vh;
+}
+
+.contact p{
+	margin: 5% 0%;
+	font-size: 4vh;
+	text-align: justify;
+	color: #b4c9e8;
+}
+
+.footer{
+	background-image: url('img/paper.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	justify-content: left;
+	text-align: left;
+}
+
+
+
+table{
+	margin: auto;
+	padding: 1%;
+
+}
+
+table img{
+	width: 3vh;
+	margin-right: 20px;
+}
+
+@media screen and (max-width: 800px){
 
 	.mapimg{
 		width: 100%;
-		height: 100vh;
 	}
 
-/*	.foot{
+	.contact{
 		width: 100%;
-		height: 10vh;
-	}*/
-}
+	}
 
+}
 
 
 
@@ -534,7 +639,7 @@ div{
 
 .next img{
   padding: 20px;
-  height: 75px;
+  width: 10vh;
   transition: all 0.3s ease;
 }
 
