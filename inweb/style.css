@@ -149,6 +149,31 @@ div{
 }
 }
 
+.soc{
+	position: fixed;
+	bottom: 0;
+	z-index: 5;
+	margin-bottom: 2%;
+}
+
+@media screen and (max-width: 800px){
+	.soc{
+		margin-bottom: 10%;
+	}
+}
+
+.soc img{
+	padding: 20%;
+	width: 7vh;
+	display: block;
+	transition: 0.3s;
+	opacity: 30%;
+}
+
+.soc img:hover{
+	width: 9vh;
+	opacity: 100%;
+}
 
 
 
@@ -393,6 +418,7 @@ div{
 	justify-content: center;
 	text-align: center;
 	margin: auto;
+	padding-left: 4%;
 	overflow: hidden;
 	width: 100%;
 	height: auto;
@@ -403,13 +429,14 @@ div{
 	text-align: center;
 	font-size: 5vh;
 	transition: 0.3s;
-}
+	color: #192645;
+	}
 
 
 
 .daily{
 	width: 40%;
-	margin: 5% 0%;
+	margin: 6% 0%;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -420,8 +447,9 @@ div{
 	overflow: hidden;
   background-color: white;
   border-style: solid;
-  border-color: #ffdf57;
   border-radius: 30px;
+  border-width: 10px;
+  border-color: #192645;
   background-color: #849bff;
   margin: 5%;
   margin-bottom: 1%;
@@ -472,7 +500,7 @@ div{
 
 .shoplink{
 	width: 60%;
-	padding: 2%;
+	padding: 5%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -481,22 +509,23 @@ div{
 
 
 .shoplink a{
-	text-decoration: none	;
+	text-decoration: none;
 }
 
 
 .shoplink img{
-	width: 25vw;
-	padding: 5%;
-	border-radius: 50px;
+	width: 20vw;
+	border-radius: 7vh;
+	border: solid;
+	border-width: 10px;
+  border-color: #192645;
 	transition: 0.3s;
+	margin: 5px 10px;
 }
 
 .shoplink img:hover{
 	transform: translate(0%, -6%);
-	opacity: 90%;
-	border: solid;
-	border-width: 10px;
+	border-width: 10px;	
 }
 
 
@@ -507,6 +536,7 @@ div{
 	.post{
 		width: 100%;
 		height: auto;
+		padding-left: 0%;
 	}
 	.daily{
 		width: 100%;
@@ -528,7 +558,7 @@ div{
 }
 
 .mapimg{
-	width: 50%;
+	width: 70%;
 	height: 100vh;
 	padding: 3%;
 	display: inline-block;
@@ -542,26 +572,43 @@ div{
 .mapimg p{
 	padding: 5% 0%;
 	color: white;
-	font-size: 2.5vw;
+	font-size: 8vh;
 }
 
 .mapimg iframe{
-	width: 60vh;
+	width: 90vh;
 	height: 60vh;
 	border: solid;
 	border-width: 2vh;
 	border-color: white;
-	border-radius: 10%;
+	border-radius: 10px;
 	transition: 0.3s;
 }
 
 .mapimg iframe:hover{
-	width: 65vh;
+	width: 100vh;
 	height: 65vh;
 }
 
+
+@media screen and (max-width: 800px){
+	.mapimg iframe{
+		width: 60vh;
+		height: 60vh;
+	}
+
+	.mapimg iframe:hover{
+		width: 65vh;
+		height: 65vh;
+	}
+
+	.mapimg p{
+		font-size: 4vh;
+	}
+}
+
 .contact{
-	width: 50%;
+	width: 30%;
 	height: 100vh	;
 	display: block;
 	padding: 4%;
@@ -572,34 +619,20 @@ div{
 }
 
 .contact img:not(table *){
-	height: 40vh;
+	height: 20vw;
 }
 
 .contact p{
 	margin: 5% 0%;
-	font-size: 4vh;
+	font-size: 3vh;
 	text-align: justify;
-	color: #b4c9e8;
-}
-
-.footer{
-	background-image: url('img/paper.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 100%;
-	height: 20vh;
-	display: flex;
-	justify-content: left;
-	text-align: left;
 }
 
 
 
 table{
-	margin: auto;
-	padding: 1%;
-
+	text-align: left;
+	padding-bottom: 50px;
 }
 
 table img{
@@ -608,6 +641,10 @@ table img{
 }
 
 @media screen and (max-width: 800px){
+
+	.contact img:not(table *){
+	height: 40vh;
+	}
 
 	.mapimg{
 		width: 100%;
