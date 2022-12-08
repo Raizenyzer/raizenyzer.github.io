@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Coffees</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="styleProds.css">
+		<link rel="icon" type="image/x-icon" href="img/logo.png">
+
+	</head>
+
+	<body>
+
+		<div class="log"> 
+			<h1>Milka<br>Krem</h1>
+		</div>
+
+		<div class="nav">
+
+				  <ul class="drop-down closed">
+				    <li><a class="nav-button">Menu</a></li>
+				    <li><a href="dairy.html">Dairy</a></li>
+				    <li><a href="bread.html">Breads</a></li>
+				    <li><a href="#">Coffee</a></li>
+				    <li><a href="other.html">Others</a></li>
+				  </ul>
+
+				<a class="home" href="index.html">Home</a>
+
+		</div>
+
+		<div class="progress-container">
+    		<div class="progress-bar" id="myBar"></div>
+  		</div>  
+
+<div class="topprod">
+		<div class="dairyh">
+			<h1>Coffees</h1>
+			<p>Check Out the Creamy Coffee Products of Milka Krem </p>
+		</div>
+
+<div class="slides">
+	<div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item"><img src="img/latte.jpg"></div>
+            <div class="carousel-item"><img src="img/icemocha.jpg"></div>
+            <div class="carousel-item"><img src="img/ameri.jpg"></div>
+            <div class="carousel-item"><img src="img/matcha.jpg"></div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+        <div class="carousel-indicators"></div>
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="dairyprod">
+
+	<div class="imgprod">
+		<img src="img/icemocha.jpg" data-action="zoom" data-original="img/choco.png" alt="Milka Krem Choco">
+	</div>
+
+	<div class="infoprod">
+		<h1>Iced Mocha</h1>
+		<p>Made with espresso, milk and chocolate, served over ice. It's a variation on the hot mocha or mocha latte, a drink made with espresso, steamed milk and chocolate.</p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity">
+		<button type="button" onclick="add()">Add to Cart</button>
+		<h6 id="show" style="display: none;">Choco Milk</h6>
+	</div>
+
+</div>
+
+<div class="dairyprod">
+
+	<div class="infoprod">
+		<h1>Iced Latte</h1>
+		<p>Made with espresso, milk and optional sweetener. The milk is often frothed to simulate the steamed milk in a standard latte. </p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity2">
+		<button type="button" onclick="add2()">Add to Cart</button>
+		<h6 id="show2" style="display: none;"></h6>
+	</div>
+
+	<div class="imgprod">
+		<img src="img/latte.jpg">
+	</div>
+
+</div>
+
+<div class="dairyprod">
+
+	<div class="imgprod">
+		<img src="img/matcha.jpg">
+	</div>
+
+	<div class="infoprod">
+		<h1>Iced Matcha</h1>
+		<p>Ceremonial Matcha Organic Green Tea has a complex flavor profile with mellow vegetal grassy notes, natural sweet nuttiness, a touch of bitterness with a pleasant savory ending. The pleasant savory taste is called umami which makes drinking matcha irresistible.</p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity3">
+		<button type="button" onclick="add3()">Add to Cart</button>
+		<h6 id="show3" style="display: none;"></h6>
+	</div>
+
+</div>
+
+<div class="dairyprod">
+
+	<div class="infoprod">
+		<h1>Iced Americano</h1>
+		<p>Made by pouring cold water, over ice followed by shots of espresso. With manual pour over, the coffee drains directly onto the cold water and ice, so it chills during brewing.</p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity2">
+		<button type="button" onclick="add2()">Add to Cart</button>
+		<h6 id="show2" style="display: none;"></h6>
+	</div>
+
+	<div class="imgprod">
+		<img src="img/ameri.jpg">
+	</div>
+
+</div>
+
+	<button onclick="topFunction()" id="topbtn" title="Go to top">Top</button>
+    <script src="script.js"></script>
+
+
+	</body>
+
+</html>

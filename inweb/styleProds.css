@@ -1,0 +1,255 @@
+
+.topprod{
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/paper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dairyh{
+	width: 100%;
+	height: 15vh;
+	display: block;
+    text-align: center;
+    padding: 3% 0%;
+    transition: 0.3s;
+}
+
+
+.dairyh h1{
+    font-size: 5vw;
+    transition: 0.3s;
+}
+
+.dairyh p{
+    font-size: 1.5vw;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 800px){
+    .dairyh{
+        padding-top: 10%;
+    }
+
+    .dairyh h1{
+        font-size: 8vw;
+    }
+
+    .dairyh p{
+        font-size: 3vw;
+    }
+}
+
+.slides{
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.carousel{
+    height: 65vh;
+    width: 200vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 80vw;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 20px;
+    border: solid;
+    border-width: 5px;
+    border-color: #1b1f26;
+}
+
+
+.carousel-inner{
+    height: 100%;
+    display: flex;
+    transition: all ease .5s;
+}
+
+.carousel-item{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-item img{
+	width: 80vw;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 800px){
+    .carousel-item img{
+    width: 150vw;
+}
+}
+
+.carousel-item h1{
+	position: absolute;
+    opacity: .5;
+}
+
+
+.carousel-indicators{
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.carousel-indicators span{
+    display: inline-block;
+    background-color: white;
+    width: 30px;
+    height: 10px;
+    border-radius: 2px;
+    opacity: .5;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 800px){
+
+    .carousel-indicators span{
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+    border-radius: 2px;
+}
+
+}
+
+
+.carousel-indicators span.active{
+    opacity: 1;
+}
+
+.dairyprod{
+	width: 100%;
+	height: 100vh;
+}
+
+.imgprod{
+	width: 50%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgprod img{
+	width: 60vh;
+	height: auto;
+    border: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.imgprod img:hover{
+    transform: translate(0%, -10%);
+
+}
+
+.infoprod{
+	width: 50%;
+	height: 100vh;
+	background-color: #b4c9e8;
+	display: block;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.infoprod h1{
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 5vw;
+    border: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #1b1f26;
+    transition: 0.3s;
+    padding: 0px 10px;
+}
+
+.infoprod h1:hover{
+    background-color: #1b1f26;
+    color: #b4c9e8;
+}
+
+.infoprod p{
+    font-size: 2.5vw;
+    text-align: justify;
+    padding: 5% 10%;
+}
+
+.infoprod h5{
+    font-size: 1.5vw;
+    color: white;
+}
+
+.infoprod h6{
+    font-size: 1.5vw;
+}
+
+
+.infoprod input{
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    margin: 1%;
+    text-align: center;
+    border: none;
+}
+
+@media screen and (max-width: 800px){
+	
+    .dairyprod{
+        height: 50vh;
+    }
+
+    .imgprod, .infoprod{
+		width: 50%;
+        height: 50vh;
+	}
+
+    .infoprod h1{
+        margin-top: 5vh;
+        border-width: 2.5px;
+        border-radius: 10px;
+        padding: 0px 5px;
+    }
+
+    .imgprod img{
+        width: 40vw;
+    }
+}
+
+button{
+	padding: 10px;
+	background-color: white;
+	border: solid;
+	border-color: white;
+	border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover{
+	background-color: transparent;
+}

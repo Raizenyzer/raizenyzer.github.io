@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Other Delicacies</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="styleProds.css">
+		<link rel="icon" type="image/x-icon" href="img/logo.png">
+
+	</head>
+
+	<body>
+
+		<div class="log"> 
+			<h1>Milka<br>Krem</h1>
+		</div>
+
+		<div class="nav">
+
+				  <ul class="drop-down closed">
+				    <li><a class="nav-button">Menu</a></li>
+				    <li><a href="dairy.html">Dairy</a></li>
+				    <li><a href="bread.html">Breads</a></li>
+				    <li><a href="coffee.html">Coffee</a></li>
+				    <li><a href="#">Others</a></li>
+				  </ul>
+
+				<a class="home" href="index.html">Home</a>
+
+		</div>
+
+		<div class="progress-container">
+    		<div class="progress-bar" id="myBar"></div>
+  		</div>  
+
+<div class="topprod">
+		<div class="dairyh">
+			<h1>Other Milka Krem Products</h1>
+			<p>Check Out Other Delicacies of Milka Krem </p>
+		</div>
+
+<div class="slides">
+	<div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item"><img src="img/icecream.jpg"></div>
+            <div class="carousel-item"><img src="img/kesoputi.jpg"></div>
+            <div class="carousel-item"><img src="img/past.jpg"></div>
+            <div class="carousel-item"><img src="img/gelato.jpg"></div>
+        </div>
+        <div class="carousel-controls">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+        <div class="carousel-indicators"></div>
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="dairyprod">
+
+	<div class="imgprod">
+		<img src="img/chocoice.jpg" alt="Milka Krem Choco">
+	</div>
+
+	<div class="infoprod">
+		<h1>Ice Cream</h1>
+		<p>Summer heat is getting too hot to handle!! Cool down with the MILKA KREM ICE CREAM selection! Delivered right at your doorstep!</p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity">
+		<button type="button" onclick="add()">Add to Cart</button>
+		<h6 id="show" style="display: none;"></h6>
+	</div>
+
+</div>
+
+<div class="dairyprod">
+
+	<div class="infoprod">
+		<h1>Halo-Halo</h1>
+		<p>Filipino-style shaved ice made with sweetened beans, fruits, and jellies and topped with milk, Leche flan, purple yam jam, and ice cream. It's a cold and refreshing treat you'll want year-round!</p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity2">
+		<button type="button" onclick="add2()">Add to Cart</button>
+		<h6 id="show2" style="display: none;"></h6>
+	</div>
+
+	<div class="imgprod">
+		<img src="img/halo.jpg">
+	</div>
+
+</div>
+
+<div class="dairyprod">
+
+	<div class="imgprod">
+		<img src="img/pastillas.jpg">
+	</div>
+
+	<div class="infoprod">
+		<h1>Pastillas</h1>
+		<p>A sweet delicacy traditionally made from carabao's milk and sugar. 
+		It's a Milka Krem best seller with a distinctively soft, smooth texture and creamy rich taste! It will surely make you wanting more.</p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity3">
+		<button type="button" onclick="add3()">Add to Cart</button>
+		<h6 id="show3" style="display: none;"></h6>
+	</div>
+
+</div>
+
+<div class="dairyprod">
+
+	<div class="infoprod">
+		<h1>Keso</h1>
+		<p>Filipino soft, unaged, white cheese made from unskimmed carabao milk and salt curdled with vinegar, citrus juices, or sometimes rennet.</p>
+		<h5>Quantity: </h5>
+		<input type="number" min="0" max="10" maxlength="2" id="quantity4">
+		<button type="button" onclick="add4()">Add to Cart</button>
+		<h6 id="show4" style="display: none;"></h6>
+	</div>
+
+	<div class="imgprod">
+		<img src="img/keso.jpg">
+	</div>
+
+</div>
+
+	<button onclick="topFunction()" id="topbtn" title="Go to top">Top</button>
+    <script src="script.js"></script>
+
+
+	</body>
+
+</html>
