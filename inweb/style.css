@@ -532,6 +532,9 @@ div{
 
 	.shoplink img{
 		width: 45vw;
+		border-radius: 5vh;
+		border-width: 5px;
+
 	}
 
 

@@ -30,7 +30,7 @@
 
 @media screen and (max-width: 800px){
     .dairyh{
-        padding-top: 10%;
+        padding-top: 20%;
     }
 
     .dairyh h1{
@@ -91,7 +91,8 @@
 
 @media screen and (max-width: 800px){
     .carousel-item img{
-    width: 150vw;
+    height: 120%;
+    width: auto;
 }
 }
 
@@ -218,28 +219,6 @@
     border: none;
 }
 
-@media screen and (max-width: 800px){
-	
-    .dairyprod{
-        height: 50vh;
-    }
-
-    .imgprod, .infoprod{
-		width: 50%;
-        height: 50vh;
-	}
-
-    .infoprod h1{
-        margin-top: 5vh;
-        border-width: 2.5px;
-        border-radius: 10px;
-        padding: 0px 5px;
-    }
-
-    .imgprod img{
-        width: 40vw;
-    }
-}
 
 button{
 	padding: 10px;
@@ -252,4 +231,54 @@ button{
 
 button:hover{
 	background-color: transparent;
+}
+
+
+@media screen and (max-width: 800px){
+    
+    .dairyprod{
+        height: 50vh;
+    }
+
+    .imgprod, .infoprod{
+        width: 50%;
+        height: 50vh;
+    }
+
+    .infoprod{
+        overflow: auto;
+    }
+
+    .infoprod h1{
+        margin-top: 3vh;
+        border-width: 2.5px;
+        border-radius: 10px;
+        padding: 0px 5px;
+        font-size: 7vw;
+    }
+
+    .infoprod p{
+        font-size: 3.5vw;
+    }
+
+    .infoprod h5{
+        font-size: 3vw;
+    }   
+
+    .infoprod h6{
+        font-size: 3vw;
+    }
+
+    .infoprod input{
+        width: 30px;
+        height: 30px;
+    }
+
+    .imgprod img{
+        width: 40vw;
+    }
+
+    button{
+        padding: 5px;
+    }
 }

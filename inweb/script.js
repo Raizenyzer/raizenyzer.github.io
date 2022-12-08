@@ -12,7 +12,7 @@
 function add() { 
   var x = document.getElementById("show");
   var y = document.getElementById("quantity").value;
-  document.getElementById("show").innerHTML = "Added " + y + " to cart";
+  document.getElementById("show").innerHTML = "Added " + y + " Order";
   if (x.style.display === "none") {
         
         x.style.display = "block";
@@ -25,7 +25,7 @@ function add() {
 function add2() { 
   var x = document.getElementById("show2");
   var y = document.getElementById("quantity2").value;
-  document.getElementById("show2").innerHTML = "Added " + y + " to cart";
+  document.getElementById("show2").innerHTML = "Added " + y + " Order";
   if (x.style.display === "none") {
         
         x.style.display = "block";
@@ -38,7 +38,7 @@ function add2() {
 function add3() { 
   var x = document.getElementById("show3");
   var y = document.getElementById("quantity3").value;
-  document.getElementById("show3").innerHTML = "Added " + y + " to cart";
+  document.getElementById("show3").innerHTML = "Added " + y + " Order";
   if (x.style.display === "none") {
         
         x.style.display = "block";
@@ -51,7 +51,7 @@ function add3() {
 function add4() { 
   var x = document.getElementById("show4");
   var y = document.getElementById("quantity4").value;
-  document.getElementById("show4").innerHTML = "Added " + y + " to cart";
+  document.getElementById("show4").innerHTML = "Added " + y + " Order";
   if (x.style.display === "none") {
         
         x.style.display = "block";
