@@ -22,7 +22,7 @@
       </div>
 
       <ul>
-        <li><a href="index.html" style="border: solid; border-width: 2px; border-color: white; border-radius: 12px;">About me</a></li>
+        <li><a href="main.html" style="border: solid; border-width: .2vw; border-color: white; border-radius: 3vh;">About me</a></li>
         <li><a href="career.html">My Career</a></li>
         <li><a href="services.html">Services</a></li>
       </ul>
@@ -31,11 +31,14 @@
 
   </nav>
 
+  <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+  </div> 
+
   <div class="bg">
 
   <div class="info">
       <h1> I'm Jay Raizen M. Musngi</h1>
-      <br><br><br>
       <p> A STUDENT AT CENTRAL LUZON STATE UNIVERSITY,<br>
         BORN IN JULY 10, 2002 AT CANDABA, PAMPANGA,<br>
         PHOTOGRAPHER, EDITOR AND GRAPHIC DESIGNER</p>
@@ -47,10 +50,16 @@
 
 
     <div class="contact">
-      <img src="img/phone-call.png" style="margin-top: 50px;">
-      <img src="img/email.png" style="margin-top: 100px;">
-      <p style="margin-top: 45px;">09757258653</p>
-      <p style="margin-top: 95px;">musngi.jay@clsu2.edu.ph</p>      
+      <table>
+         <tr>
+             <td><img src="img/phone-call.png" alt="Phone"></td>
+             <td class="text">+63 975 7258 653</td>
+         </tr>
+         <tr>
+             <td><img src="img/email.png" alt="Email"></td>
+             <td class="text">musngi.jay@clsu2.edu.ph</td>
+         </tr>
+      </table>     
     </div>
 
     <div class="socmeds">
@@ -66,6 +75,8 @@
     <a href="career.html"><img src="img/next.png"></a>
   </div>
 
+    <button onclick="topFunction()" id="topbtn" title="Go to top">Top</button>
+    <script src="script.js"></script>
 
 </body>
 
