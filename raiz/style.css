@@ -8,35 +8,59 @@
   font-family: 'Bebas Neue', cursive;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 
 nav{
   position: fixed;
   background-color: rgb(44, 51, 51);
   width: 100%;
-  padding: 20px 0;
+  padding: 3vh 0;
   z-index: 12;
 }
 
+@media screen and (max-width: 800px){
+  nav{
+    padding: 2vh 0;
+  }
+}
+
 nav .menu{
-  max-width: 1250px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0vh 4vh;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .menu .logo img{
-  padding: 0px 2px;
+  padding: 0px 1vh;
+  height: 2vh;
 }
 
 .menu ul{
-  display: inline-flex;
+  float: right;
+  display: flex;
+}
+
+@media screen and (max-width: 800px){
+  .menu ul{
+    margin-top: -1vh;
+  }
 }
 
 .menu ul li{
   list-style: none;
-  margin-left: 7px;
+  margin-left: 1vh;
 }
 
 
@@ -48,11 +72,17 @@ nav .menu{
 .menu ul li a{
   text-decoration: none;
   color: #fff;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 500;
-  padding: 5px 15px;
-  border-radius: 2px;
+  padding: 1vh 5vh;
+  border-radius: 2vh;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 800px){
+  .menu ul li a{
+    font-size: 2vw;
+  }
 }
 
 
@@ -66,7 +96,7 @@ nav .menu{
 
 .bg{
   position: relative;  
-  top: 100px;
+  top: 12vh;
   margin-bottom: 10%;
   border-radius: 0px 60px 60px 0px;
   margin-right: 20%;
@@ -87,10 +117,11 @@ nav .menu{
 
 
 .info h1{
-  padding-top: 40px;
+  padding-top: 5%;
   font-size: 5.5vw;
   font-family: 'Caveat', cursive;
   color: #fff;
+  margin-bottom: 5%;
 }
 
 
@@ -101,6 +132,7 @@ nav .menu{
 
 
 .contact{
+  width: 30%;
   margin-bottom: 3%;
   margin-right: 3%;
   background-color: white;
@@ -109,6 +141,7 @@ nav .menu{
   border-radius: 0px 30px 30px 0px;
   padding-left: 3%;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .contact:hover{
@@ -116,18 +149,38 @@ nav .menu{
 }
 
 
-.contact p{
-  position: absolute;
-  font-size: 4vh;
-  padding: 0px 0px 0px 50px;
-  color: rgb(44, 51, 51);
-}
-
 .contact img{
   filter: invert(15%);
-  position: absolute;
   color: rgb(44, 51, 51);
   height: 4vh;
+  margin-bottom: 2%;
+}
+
+table{
+  text-align: left;
+  padding: 15% 0;
+}
+
+@media screen and (max-width: 200px){
+
+  table{
+    padding: 0% 0;
+    margin: 0;
+  }
+
+  .contact img{
+    margin-bottom: 0%;
+  }
+
+
+}
+
+
+
+.text{
+  font-size: 3vh;
+  color: rgb(44, 51, 51);
+  padding-left: 3%;
 }
 
 .me img{
@@ -135,7 +188,6 @@ nav .menu{
   margin-right: calc(0% - 20vw);
   flex: 45%;
   transition: all 0.3s ease;
-
 }
 
 .me img:hover{
@@ -156,7 +208,7 @@ nav .menu{
 
 .socmeds img{
   height: 10vh;
-  padding: 5px; 
+  padding: 2vh; 
   filter: invert(100%);
   transition: all 0.3s ease;
 
@@ -189,7 +241,7 @@ nav .menu{
   margin-right: 5%;
   margin-bottom: 3%;
   background-color: white;
-  padding: 10px;
+  padding: 2vh;
   width: 30%;
   height: 80%;
   border-radius: 50px;
@@ -200,7 +252,7 @@ nav .menu{
   margin-top: 3%;
   margin-bottom: 2%;
   margin-left: 3%;
-  height: 450px;
+  height: 70vh;
   flex: 50%;
   transition: all 0.3s ease;
 }
@@ -268,7 +320,7 @@ nav .menu{
   margin-top: 5%;
   padding-top: 10%;
   height: 45vh;
-  padding: 30px;
+  padding: 3vh;
   transition: all 0.3s ease;
 }
 
@@ -373,8 +425,8 @@ nav .menu{
 }
 
 .next img{
-  padding: 30px;
-  height: 100px;
+  padding: 30%;
+  height: 15vh;
   background-color: rgba(255,255,255, 0.2);
   border-radius: 100px;
   transition: all 0.3s ease;
@@ -396,8 +448,49 @@ nav .menu{
 
 .prev img{
   transform: rotate(180deg);
-  padding: 30px;
-  height: 100px;
+  padding: 30%;
+  height: 15vh;
   background-color: rgba(255,255,255, 0.2);
   border-radius: 100px;
+}
+
+.progress-container {
+  position: fixed;
+  width: 100%;
+  height: 8px;
+  z-index: 100;
+}
+
+.progress-bar {
+  height: 4px;
+  background: white;
+  width: 0%;
+}
+
+@media screen and (max-width: 800px){
+  .progress-bar{
+    height: 2px;
+  }
+}
+
+#topbtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  border: none;
+  background-color: rgb(57,91,100);
+  color: white;
+  cursor: pointer;
+  padding: 1%;
+  border-radius: 10px;
+  font-size: 2vh;
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+#topbtn:hover {
+  opacity: 100%;
+  bottom: 22px;
 }
